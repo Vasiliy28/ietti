@@ -1,0 +1,90 @@
+body{
+    font-family: RobotoRegular;
+}
+header.headerPage {
+    position: relative;
+     overflow: hidden;
+}
+
+.headerPage figure.back{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    overflow: hidden;
+}
+
+.headerPage figure.back img{
+    display: block;
+    width: 100%;
+    opacity: 1;
+}
+
+.si-icon {
+    position: fixed;
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    margin: 40px 30px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 99999;
+    right: 10%;
+}
+.si-icon span{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #3c3c3c;
+    opacity: 0.6;
+    z-index: -1;
+
+}
+.no-svg .si-icon-hamburger-cross {
+    background-image: url('/img/png/hamburger1.png')
+}
+.navPage{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+
+}
+.itemPage{
+    padding: 0;
+    text-align: center;
+    margin-top: 15%;
+    list-style: none;
+}
+.itemPage li{
+    margin-bottom: 10px;
+}
+.itemPage li:hover{
+    background-color: #303030;
+    opacity: 0.6;
+}
+.itemPage a{
+    color: #CCE361;
+    font-size: 28px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+}
+.coverNavPage{
+    position: fixed;
+    width:100%;
+    height: 100%;
+    background-color: #3c3c3c ;
+    opacity: 0.8;
+    z-index: -1;
+    top: 0;
+}
+
+
+
+
+
