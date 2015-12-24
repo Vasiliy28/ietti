@@ -33,7 +33,7 @@
 <header class="headerPage" id="headerPage">
 
     <figure class="back" id="back">
-        <img src="img/header2.jpg" alt="">
+        <img src="img/header.jpg" alt="">
     </figure>
     <div class="container">
 
@@ -45,16 +45,16 @@
 
         </div>
     </div>
-<span class="si-icon si-icon-hamburger-cross" data-icon-name="hamburgerCross">
+<span class="si-icon si-icon-hamburger-cross " id="togNav" data-icon-name="hamburgerCross">
 							<span></span>
 						</span>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-    <nav class="navPage">
+
+    <nav class="navPage" id="navPage">
         <ul class="itemPage">
-            <li><a href="">About</a> </li>
-            <li><a href="">ContactUs</a> </li>
-            <li><a href="">Portfolio</a> </li>
+            <li><a href="">About</a><span></span></li>
+            <li><a href="">ContactUs</a><span></span> </li>
+            <li><a href="">Portfolio</a><span></span> </li>
         </ul>
         <div class="coverNavPage"></div>
     </nav>
@@ -77,12 +77,27 @@
 
         [].slice.call(document.querySelectorAll('.si-icon')).forEach(function (el) {
             var svgicon = new svgIcon(el, svgIconConfig);
+
         });
 
         new svgIcon(document.querySelector('.si-icons-easing .si-icon-hamburger-cross'), svgIconConfig, {
+
+                   easing: mina.elastic,
+                    speed: 600,
+                    evtoggle : 'mouseover', // event: click || mouseover
+                    size : { w : 64, h : 64 }, // size
+                    onLoad : function() { return false; }, // callback on svg load
+                    onToggle : function() { return false; } // callback on toggle (click or mouseover/mouseout)
+
+
+
+        },
+        console.log({
             easing: mina.elastic,
-            speed: 600
-        });
+            speed: 600,
+
+        })
+        );
 
     })();
 </script>

@@ -19,3 +19,6 @@ $(window).scroll(function(){
         "transform":"translate(0% , " + st/15 + "%"    })
 
 })
+$("#togNav").click(function(){
+    $("#navPage").toggleClass('active')
+})
