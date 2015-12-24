@@ -105,7 +105,7 @@
 		else {
 			this.el.addEventListener( this.clickevent, toggleFn );
 		}
-		
+
 	};
 
 	svgIcon.prototype.toggle = function( motion ) {
