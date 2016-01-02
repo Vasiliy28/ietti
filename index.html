@@ -11,7 +11,6 @@
 <head>
 
     <meta charset="utf-8">
-
     <title>Заголовок</title>
     <meta name="description" content="">
 
@@ -19,50 +18,255 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
-
+    <link rel="stylesheet" href="/css/font-awesome.css">
     <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/media.css">
 
-    <script src="js/snap.svg-min.js"></script>
-    <script src="js/modernizr.custom.js"></script>
 
+    <script src="js/mainJs/modernizr.custom.js"></script>
+    <script src="js/svg/snap.svg-min.js"></script>
+
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 </head>
 
 
 <header class="headerPage" id="headerPage">
-
     <figure class="back" id="back">
-        <img src="img/room.jpg" alt="">
+        <img src="img/room1.jpg" alt="">
+        <img src="img/room2.jpg" alt="">
+        <img src="img/room3.jpg" alt="">
+        <img src="img/room4.jpg" alt="">
+        <img src="img/room5.jpg" alt="">
+        <img src="img/room6.jpg" alt="">
     </figure>
+    <span class="si-icon si-icon-hamburger-cross " id="togNav" data-icon-name="hamburgerCross">
+        <span></span>
+    </span>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-2">
+                <figure class="logo" id="logo">
+                    <a href="">
+                        <img src="img/logo.png" alt="">
+                        <img src="img/logoHover.png" alt="">
+                    </a>
+
+                    <span></span>
+                </figure>
+
+            </div>
+        </div>
 
 
+   <div class="mainLinkWrap">
+       <a class="mainLink" href="#"><span data-letters-l="Finde" data-letters-r="more">Finde more</span></a>
+       <span></span>
+   </div>
+    </div>
 
-                 <button class="mainButton"><a href="">find more</a> <span></span> </button>
 
-<span class="si-icon si-icon-hamburger-cross " id="togNav" data-icon-name="hamburgerCross">
-							<span></span>
-						</span>
-    <nav class="navPage" id="navPage">
-        <ul class="itemPage">
-            <li><a href="">About</a><span></span></li>
-            <li><a href="">ContactUs</a><span></span> </li>
-            <li><a href="">Portfolio</a><span></span> </li>
-        </ul>
-        <div class="coverNavPage"></div>
-    </nav>
 
 </header>
 
 
+<section class="wrapperOurWork backColSection">
+    <div class="container " >
+            <section class="ourWork">
+                <header>
+                    <h1>Our Work</h1>
+                    <h3>work's at the last time </h3>
+                    <div><span class="sep"></span></div>
+                    <div><span class="sep"></span></div>
+                    <div><span class="sep"></span></div>
+
+                </header>
+
+                <nav class="workMenu">
+                    <ul>
+                        <li class="filter" data-filter="all">all <span></span></li>
+                        <li class="filter" data-filter=".category1 ">category 1 <span></span></li>
+                        <li class="filter" data-filter=".category2">category 2 <span></span></li>
+                        <li class="filter" data-filter=".category3">category 3 <span></span></li>
+                    </ul>
+                </nav>
+
+                <article id="allWorks" class="allWorks clearfix">
+
+                    <div class="mix col-xs-12 col-sm-6 col-md-4 col-lg-3 clearfix category2 category1 ">
+                        <figure class="ourWorkEffect">
+                            <img src="img/portfolio/1.jpg" alt="img06"/>
+
+                            <figcaption>
+                                <h2><i>by&#160;</i><span>ieti</span></h2>
+                                <p>
+                                    <a href="#"><i class="fa fa-comments-o "></i></a>
+                                    <a href="#"><i class="fa fa-thumbs-o-up "></i></a>
+                                    <a href="#"><i class="fa fa-share "></i></a>
+                                </p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="mix col-xs-12 col-sm-6 col-md-4 col-lg-3 category1 category3 clearfix">
+                        <figure class="ourWorkEffect">
+                            <img src="img/portfolio/2.jpg" alt="img06"/>
+
+                            <figcaption>
+                                <h2><i>by&#160;</i><span>ieti</span></h2>
+                                <p>
+                                    <a href="#"><i class="fa fa-comments-o "></i></a>
+                                    <a href="#"><i class="fa fa-thumbs-o-up "></i></a>
+                                    <a href="#"><i class="fa fa-share "></i></a>
+                                </p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="mix col-xs-12 col-sm-6 col-md-4 col-lg-3 category3 category1 clearfix">
+                        <figure class="ourWorkEffect">
+                            <img src="img/portfolio/3.jpg" alt="img06"/>
+
+                            <figcaption>
+                                <h2><i>by&#160;</i><span>Ieti</span></h2>
+                                <p>
+                                    <a href="#"><i class="fa fa-comments-o "></i></a>
+                                    <a href="#"><i class="fa fa-thumbs-o-up "></i></a>
+                                    <a href="#"><i class="fa fa-share "></i></a>
+                                </p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="mix col-xs-12 col-sm-6 col-md-4 col-lg-3 category3 clearfix">
+                        <figure class="ourWorkEffect">
+                            <img src="img/portfolio/4.jpg" alt="img06"/>
+
+                            <figcaption>
+                                <h2><i>by&#160;</i><span>Ieti</span></h2>
+                                <p>
+                                    <a href="#"><i class="fa fa-comments-o "></i></a>
+                                    <a href="#"><i class="fa fa-thumbs-o-up "></i></a>
+                                    <a href="#"><i class="fa fa-share "></i></a>
+                                </p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="mix col-xs-12 col-sm-6 col-md-4 col-lg-3 category1 category3 clearfix">
+                        <figure class="ourWorkEffect">
+                            <img src="img/portfolio/5.jpg" alt="img06"/>
+
+                            <figcaption>
+                                <h2><i>by&#160;</i><span>Ieti</span></h2>
+                                <p>
+                                    <a href="#"><i class="fa fa-comments-o"></i></a>
+                                    <a href="#"><i class="fa fa-thumbs-o-up "></i></a>
+                                    <a href="#"><i class="fa fa-share "></i></a>
+                                </p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="mix col-xs-12 col-sm-6 col-md-4 col-lg-3 category3 category2 clearfix">
+                        <figure class="ourWorkEffect">
+                            <img src="img/portfolio/6.jpg" alt="img06"/>
+
+                            <figcaption>
+                                <h2><i>by&#160;</i><span>Ieti</span></h2>
+                                <p>
+                                    <a href="#"><i class="fa fa-comments-o"></i></a>
+                                    <a href="#"><i class="fa fa-thumbs-o-up "></i></a>
+                                    <a href="#"><i class="fa fa-share "></i></a>
+                                </p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="mix col-xs-12 col-sm-6 col-md-4 col-lg-3 category1 clearfix">
+                        <figure class="ourWorkEffect">
+                            <img src="img/portfolio/7.jpg" alt="img06"/>
+
+                            <figcaption>
+                                <h2><i>by&#160;</i><span>Ieti</span></h2>
+                                <p>
+                                    <a href="#"><i class="fa fa-comments-o "></i></a>
+                                    <a href="#"><i class="fa fa-thumbs-o-up "></i></a>
+                                    <a href="#"><i class="fa fa-share "></i></a>
+                                </p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="mix col-xs-12 col-sm-6 col-md-4 col-lg-3 category3 category1 category2 clearfix ">
+                        <figure class="ourWorkEffect">
+                            <img src="img/portfolio/8.jpg" alt="img06"/>
+
+                            <figcaption>
+                                <h2><i>by&#160;</i><span>Ieti</span></h2>
+                                <p>
+                                    <a href="#"><i class="fa fa-comments-o "></i></a>
+                                    <a href="#"><i class="fa fa-thumbs-o-up "></i></a>
+                                    <a href="#"><i class="fa fa-share"></i></a>
+                                </p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </article>
+
+            </section>
+
+        </div>
+
+</section>
+
+<section style="height: 500px" >
+
+
+<article class="box"></article>
+</section>
+<section style="height: 500px" class="backColSection">
+
+</section>
+<section style="height: 500px">
+
+       <!-- <div id="cbp-bicontrols" class="cbp-bicontrols">
+            <span class="cbp-biprev"></span>
+            <span class="cbp-bipause"></span>
+            <span class="cbp-binext"></span>
+        </div>-->
+
+
+</section>
+
+
+
+<!--hidden-->
+
+<nav class="navPage" id="navPage">
+    <ul class="itemPage">
+        <li><a href="">About</a><span></span></li>
+        <li><a href="">ContactUs</a><span></span></li>
+        <li><a href="">Portfolio</a><span></span></li>
+    </ul>
+    <div class="coverNavPage"></div>
+</nav>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-<script src="js/myJS.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.min.js"></script>
-<script src="js/parallax.js"></script>
-<script src="js/svgicons-config.js"></script>
-<script src="js/svgicons.js"></script>
+<script src="js/mainJs/bootstrap.min.js"></script>
+<script src="js/svg/svgicons-config.js"></script>
+<script src="js/svg/svgicons.js"></script>
+
+<script src="js/background/backSlider.js"></script>
+
+<script src="js/wow.js"></script>
+<script src="js/an/animate-css.js"></script>
+<script src="js/mix/mixUp.js"></script>
+<script src="js/waypoints/jquery.waypoints.min.js"></script>
+
+<script src="js/myJS.js"></script>
+
+
+
+
+
 <script>
     (function () {
         // initialize all
@@ -72,27 +276,10 @@
 
         });
 
-        new svgIcon(document.querySelector('.si-icons-easing .si-icon-hamburger-cross'), svgIconConfig, {
-
-                   easing: mina.elastic,
-                    speed: 600,
-                    evtoggle : 'mouseover', // event: click || mouseover
-                    size : { w : 64, h : 64 }, // size
-                    onLoad : function() { return false; }, // callback on svg load
-                    onToggle : function() { return false; } // callback on toggle (click or mouseover/mouseout)
-
-
-
-        },
-        console.log({
-            easing: mina.elastic,
-            speed: 600,
-
-        })
-        );
-
     })();
 </script>
-
+<script>
+    new WOW().init();
+</script>
 </body>
 </html>
