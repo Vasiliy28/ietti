@@ -2,7 +2,6 @@
     $(window).ready(function(){
         'use strict'
 
-
         function chengHeight() {
             var backImg = $('#back img');
             backImg.css("max-height",$(window).height())
@@ -48,4 +47,28 @@
             $(".ourWork header div").animated("slideInRight","slideOutRight",50,30)
         }
 
+
+        $("input.inputField").each(function(){
+            if ($(this).val() !== '') {
+                var par = $(this).parent();
+                par.addClass('inputFilled')
+            }
+
+            $(this).on("focus", function () {
+                var par = $(this).parent();
+                par.addClass('inputFilled')
+            })
+
+            $(this).on("blur",function(){
+                if($(this).val()==''){
+
+                    var par =  $(this).parent();
+                    par.removeClass('inputFilled')
+                }
+                else {
+                    return
+                }
+            })
+        })
     })
+
