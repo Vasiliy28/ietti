@@ -47,9 +47,18 @@
             $(".ourWork header div").animated("slideInRight","slideOutRight",50,30)
         }
 
+        if($("#input5").val().match(/\S/g)==null){
+            console.log("ok")
+        }
+        console.log($("#input5").val().match(/\S/g))
+        console.log($("#input5").val().search(/[ ]+/))
 
+        console.log($("#input5").val().split(/\W/))
         $(".inputField").each(function(){
-            if ($(this).val() !== '') {
+
+
+            if ($(this).val() !== '' || $(this).val().match(/\S/g)==null) {
+
                 var par = $(this).parent();
                 par.addClass('inputFilled')
             }
@@ -60,7 +69,7 @@
             })
 
             $(this).on("blur",function(){
-                if($(this).val()==''){
+                if($(this).val()=='' || $(this).val().match(/\S/g)==null){
 
                     var par =  $(this).parent();
                     par.removeClass('inputFilled')
