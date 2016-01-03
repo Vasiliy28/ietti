@@ -48,7 +48,7 @@
         }
 
 
-        $("input.inputField").each(function(){
+        $(".inputField").each(function(){
             if ($(this).val() !== '') {
                 var par = $(this).parent();
                 par.addClass('inputFilled')
