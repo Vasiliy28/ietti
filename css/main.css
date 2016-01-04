@@ -21,7 +21,7 @@ header.headerPage {
 }
 
 .headerPage figure.back img{
-   display: none;
+    display: none;
     width: 100%;
     opacity: 1;
 
@@ -169,7 +169,6 @@ header.headerPage {
 .mainLinkWrap {
 
     max-width: 100%;
-
     z-index: 1;
     position: absolute;
     text-align: center;
@@ -353,6 +352,18 @@ header.headerPage {
 
 
 .backColSection{
+    position: relative;
+
+
+}
+.backColSection:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    left: 0;
+    width: 100%;
+    opacity: 0.6;
     background: -moz-linear-gradient(45deg, rgba(58,58,58,1) 0%, rgba(99,99,99,1) 20%, rgba(128,128,128,1) 40%, rgba(133,133,133,1) 50%, rgba(131,131,131,1) 53%, rgba(128,128,128,1) 60%, rgba(99,99,99,1) 80%, rgba(58,58,58,1) 100%); /* ff3.6+ */
     background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(58,58,58,1)), color-stop(20%, rgba(99,99,99,1)), color-stop(40%, rgba(128,128,128,1)), color-stop(50%, rgba(133,133,133,1)), color-stop(53%, rgba(131,131,131,1)), color-stop(60%, rgba(128,128,128,1)), color-stop(80%, rgba(99,99,99,1)), color-stop(100%, rgba(58,58,58,1))); /* safari4+,chrome */
     background: -webkit-linear-gradient(45deg, rgba(58,58,58,1) 0%, rgba(99,99,99,1) 20%, rgba(128,128,128,1) 40%, rgba(133,133,133,1) 50%, rgba(131,131,131,1) 53%, rgba(128,128,128,1) 60%, rgba(99,99,99,1) 80%, rgba(58,58,58,1) 100%); /* safari5.1+,chrome10+ */
@@ -360,6 +371,7 @@ header.headerPage {
     background: -ms-linear-gradient(45deg, rgba(58,58,58,1) 0%, rgba(99,99,99,1) 20%, rgba(128,128,128,1) 40%, rgba(133,133,133,1) 50%, rgba(131,131,131,1) 53%, rgba(128,128,128,1) 60%, rgba(99,99,99,1) 80%, rgba(58,58,58,1) 100%); /* ie10+ */
     background: linear-gradient(45deg, rgba(58,58,58,1) 0%, rgba(99,99,99,1) 20%, rgba(128,128,128,1) 40%, rgba(133,133,133,1) 50%, rgba(131,131,131,1) 53%, rgba(128,128,128,1) 60%, rgba(99,99,99,1) 80%, rgba(58,58,58,1) 100%); /* w3c */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a3a3a', endColorstr='#3a3a3a',GradientType=1 ); /* ie6-9 */
+   z-index: -1;
 }
 
 /*****OurWorkEffect******/
@@ -535,7 +547,7 @@ figure.ourWorkEffect:hover p a:first-child i {
 .ourWork header{
     text-align: center;
     color: #30302F;
-     max-width: 240px;
+    max-width: 240px;
     margin: 0 auto;
 }
 .ourWork header h1{
@@ -630,55 +642,68 @@ nav.workMenu ul li.active span{
 
 .no-js.backgroundsize .cbp-bislideshow li:first-child img {
     display: block;
+
+}
+
+.wrapperContactUs{
+    position: relative;
+    overflow: hidden;
+    background: url(../img/room1.jpg) no-repeat center center fixed;
+    background-size: cover;
+    z-index: 1;
+}
+.wrapperContactUs img.back{
+    display: block;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+
 }
 
 
-.box{
-    width: 200px;
-    height: 30px;
-    opacity: 0;
-    background: aquamarine;
-    margin: 10px 0;
-    pointer-events: none;
-    animation-duration: 0.5s;
-    animation-delay: 0.5s;
-}
-   .pointerEvents{
-    pointer-events: auto;
-}
-
-.box p{
+.contactUs header{
     text-align: center;
 }
-
-
-.box1{
-    width: 200px;
-    height: 30px;
-
-    background: aquamarine;
-    margin: 10px 0;
-
+.contactUs header p{
+    max-width: 400px;
+    margin: auto;
 }
-
-
-.input{
+.input , .text{
     font-size: 150%;
     position: relative;
     z-index: 1;
     display: inline-block;
-
-    width: calc(100% );
+    width: calc(100% - 4%) ;
     vertical-align: top;
     overflow: hidden;
     padding:3% 0 0;
+    margin: 0 2%;
+    opacity: 0;
+}
+.hid{
+    overflow: hidden;
+}
+
+.text{
+    height:100%;
+    padding: 0;
 
 }
 textarea.inputField{
     resize: none;
     height: 100%;
+    margin: 4% 0 3%;
+    padding-bottom: 1%;
+
+}
+.text .inputGraphic{
+    padding: 0;
 }
 .inputField{
+
     position: relative;
     display: block;
     float: right;
@@ -688,11 +713,11 @@ textarea.inputField{
     height: 100%;
     width: 100%;
     background: transparent;
-    color: #2F3238;
+    color: #ffffff;
     font-size: 1.55em;
     opacity: 0;
     margin: 3% 0;
-
+    padding: 0 2%;
 }
 .inputField:focus{
     outline: none;
@@ -700,7 +725,6 @@ textarea.inputField{
 .inputLabel{
     display: inline-block;
     float: right;
-    color: #696969;
     font-weight: bold;
     font-size: 70.25%;
     -webkit-font-smoothing: antialiased;
@@ -724,11 +748,17 @@ textarea.inputField{
     transition: transform 0.3s;
     z-index: 50;
 }
+
+.text .inputLabel{
+    -webkit-transform: translate3d(0, 1.75em, 0);
+    transform: translate3d(1em, 1.75em, 0);
+
+}
 .inputLabelContent{
     position: relative;
     display: block;
     width: 100%;
-    color: #A4A5A6;
+    color: #CCFF33;
     padding: 0.4em 0 0.25em;
     -webkit-transition: -webkit-transform 0.3s;
     transition: transform 0.3s;
@@ -741,7 +771,7 @@ textarea.inputField{
     left: 0;
     height: 100%;
     width: 100%;
-    color: #fff;
+    color: #30302F;
     padding: 0.25em 0;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -750,14 +780,14 @@ textarea.inputField{
 }
 .inputGraphic{
     position: absolute;
-
     left: 0;
     padding:3% 0 0;
-    fill: #494E57;
+    fill: #6D6D6D;
     pointer-events: none;
     bottom: 0;
     height: 100%;
     z-index: -1;
+    opacity: 0.6;
     -webkit-transition: -webkit-transform 0.7s, fill 0.7s;
     transition: transform 0.7s, fill 0.7s;
     -webkit-transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
@@ -779,9 +809,10 @@ textarea.inputField{
     transform: translate3d(0, 0, 0);
 }
 
+
 .inputField:focus ~ .inputGraphic,
 .inputFilled .inputGraphic {
-    fill: #fff;
+
     -webkit-transform: translate3d(-66.6%, 0, 0);
     transform: translate3d(-66.6%, 0, 0);
 }
@@ -793,6 +824,74 @@ textarea.inputField{
     -webkit-transform: translate3d(0, -100%, 0);
     transform: translate3d(0, -100%, 0);
 }
+
+.button {
+    min-width: 150px;
+    max-width: 250px;
+    display: block;
+    margin: 0 auto;
+    background: #6D6D6D;
+    color: #CCFF33;
+    vertical-align: middle;
+    position: relative;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 600;
+    border: none;
+    overflow: hidden;
+    padding: 0;
+    width: 230px;
+}
+
+.button:focus {
+    outline: none;
+}
+.button > span {
+    vertical-align: middle;
+    display: block;
+}
+.button::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background: #30302F;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+}
+
+.button::before,
+.button > span {
+    padding: 1em 2em;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+    transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+
+
+.button:hover::before {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.button:hover > span {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+}
+
+
+
+
+
+
+
+
+
+
 
 
 

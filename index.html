@@ -62,8 +62,8 @@
         </div>
 
 
-   <div class="mainLinkWrap">
-       <a class="mainLink" href="#"><span data-letters-l="Finde" data-letters-r="more">Finde more</span></a>
+   <div class="mainLinkWrap" id="mainLinkWrap">
+       <a class="mainLink" type="submit" href="#"><span data-letters-l="Finde" data-letters-r="more">Finde more</span></a>
        <span></span>
    </div>
     </div>
@@ -236,79 +236,71 @@
 </section>
 
 <section class="wrapperContactUs backColSection">
+
     <div class="container">
-        <form class="form-horizontal">
-            <fieldset>
-                <div class="form-group">
-                    <div class="col-md-6">
-                        <div class="input">
-                            <textarea class="inputField" type="text" rows="3" id="input5">
+        <article class="contactUs">
+            <header>
+                <h1>ContactUs</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, ratione?</p>
+            </header>
+            <form class="contactUsForm form-horizontal">
+                <fieldset>
+                    <div class="form-group">
+                        <div class="col-md-6">
 
-                            </textarea>
-                            <!--<label class="inputLabel" for="input5">
-                                <span class="inputLabelContent" data-content="Name">name</span>
-                            </label>-->
-                            <svg class="inputGraphic" width="300%" height="100%" viewBox="0 0 1200 60"
-                                 preserveAspectRatio="none">
-                                <path d="M1200,9c0,0-305.005,0-401.001,0C733,9,675.327,4.969,598,4.969C514.994,4.969,449.336,9,400.333,9C299.666,9,0,9,0,9v43c0,0,299.666,0,400.333,0c49.002,0,114.66,3.484,197.667,3.484c77.327,0,135-3.484,200.999-3.484C894.995,52,1200,52,1200,52V9z"/>
-                            </svg>
-
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="input">
-                            <input class="inputField" type="text" id="input1">
-                            <label class="inputLabel" for="input1">
-                                <span class="inputLabelContent" data-content="Name">Frequency</span>
-                            </label>
-                            <svg class="inputGraphic" width="300%" height="100%" viewBox="0 0 1200 60"
-                                 preserveAspectRatio="none">
-
-                                <path d="M1200,9c0,0-305.005,0-401.001,0C733,9,675.327,4.969,598,4.969C514.994,4.969,449.336,9,400.333,9C299.666,9,0,9,0,9v43c0,0,299.666,0,400.333,0c49.002,0,114.66,3.484,197.667,3.484c77.327,0,135-3.484,200.999-3.484C894.995,52,1200,52,1200,52V9z"/>
-                            </svg>
 
 
                         </div>
-                        <div class="input">
-                            <input class="inputField" type="text" id="input2">
-                            <label class="inputLabel" for="input2">
-                                <span class="inputLabelContent" data-content="Name">Frequency</span>
-                            </label>
-                            <svg class="inputGraphic" width="300%" height="100%" viewBox="0 0 1200 60"
-                                 preserveAspectRatio="none">
+                        <div class="col-md-6 hid">
+                            <div class="input ">
+                                <input class="inputField" type="text" id="input1">
+                                <label class="inputLabel" for="input1">
+                                    <span class="inputLabelContent" data-content="Name">Frequency</span>
+                                </label>
+                                <svg class="inputGraphic" width="300%" height="100%" viewBox="0 0 1200 60"
+                                     preserveAspectRatio="none">
 
-                                <path d="M1200,9c0,0-305.005,0-401.001,0C733,9,675.327,4.969,598,4.969C514.994,4.969,449.336,9,400.333,9C299.666,9,0,9,0,9v43c0,0,299.666,0,400.333,0c49.002,0,114.66,3.484,197.667,3.484c77.327,0,135-3.484,200.999-3.484C894.995,52,1200,52,1200,52V9z"/>
-                            </svg>
-
-
-                        </div>
-                        <div class="input">
-                            <input class="inputField" type="text" id="input3">
-                            <label class="inputLabel" for="input3">
-                                <span class="inputLabelContent" data-content="Name">Frequency</span>
-                            </label>
-                            <svg class="inputGraphic" width="300%" height="100%" viewBox="0 0 1200 60"
-                                 preserveAspectRatio="none">
-
-                                <path d="M1200,9c0,0-305.005,0-401.001,0C733,9,675.327,4.969,598,4.969C514.994,4.969,449.336,9,400.333,9C299.666,9,0,9,0,9v43c0,0,299.666,0,400.333,0c49.002,0,114.66,3.484,197.667,3.484c77.327,0,135-3.484,200.999-3.484C894.995,52,1200,52,1200,52V9z"/>
-                            </svg>
+                                    <path d="M1200,9c0,0-305.005,0-401.001,0C733,9,675.327,4.969,598,4.969C514.994,4.969,449.336,9,400.333,9C299.666,9,0,9,0,9v43c0,0,299.666,0,400.333,0c49.002,0,114.66,3.484,197.667,3.484c77.327,0,135-3.484,200.999-3.484C894.995,52,1200,52,1200,52V9z"/>
+                                </svg>
 
 
-                        </div>
-                        <div class="input">
-                            <input class="inputField" type="text" id="input4">
-                            <label class="inputLabel" for="input4">
-                                <span class="inputLabelContent" data-content="Name">Frequency</span>
-                            </label>
+                            </div>
+                            <div class="input">
+                                <input class="inputField" type="text" id="input2">
+                                <label class="inputLabel" for="input2">
+                                    <span class="inputLabelContent" data-content="Name">Frequency</span>
+                                </label>
+                                <svg class="inputGraphic" width="300%" height="100%" viewBox="0 0 1200 60"
+                                     preserveAspectRatio="none">
+                                    <path d="M1200,9c0,0-305.005,0-401.001,0C733,9,675.327,4.969,598,4.969C514.994,4.969,449.336,9,400.333,9C299.666,9,0,9,0,9v43c0,0,299.666,0,400.333,0c49.002,0,114.66,3.484,197.667,3.484c77.327,0,135-3.484,200.999-3.484C894.995,52,1200,52,1200,52V9z"/>
+                                </svg>
+                            </div>
+                            <div class="text">
+                                <textarea class="inputField" type="text" rows="2" id="input5"></textarea>
 
+                                <label class="inputLabel" for="input5">
+                                    <span class="inputLabelContent" data-content="Name">name</span>
+                                </label>
+                                <svg class="inputGraphic" width="300%" height="100%" viewBox="0 0 1200 60"
+                                     preserveAspectRatio="none">
+                                    <path d="M1200,9c0,0-305.005,0-401.001,0C733,9,675.327,4.969,598,4.969C514.994,4.969,449.336,9,400.333,9C299.666,9,0,9,0,9v43c0,0,299.666,0,400.333,0c49.002,0,114.66,3.484,197.667,3.484c77.327,0,135-3.484,200.999-3.484C894.995,52,1200,52,1200,52V9z"/>
+                                </svg>
 
+                            </div>
                         </div>
 
                     </div>
-                </div>
+                    <div class="form-group">
+                        <div class="col-md-6 col-md-offset-6">
+                            <button class="button" data-text="Submit"><span>Submit</span></button>
+                        </div>
 
-            </fieldset>
-        </form>
+
+                    </div>
+                </fieldset>
+            </form>
+        </article>
+
     </div>
 </section>
 <section style="height: 500px">
@@ -321,7 +313,7 @@
 
 
 </section>
-
+<section style="height: 500px"></section>
 
 <!--hidden-->
 

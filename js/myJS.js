@@ -17,7 +17,14 @@
             var st =$(this).scrollTop();
 
             $('#back').css({
-                "transform":"translate(0% , " + st/15 + "%"    })
+                "transform":"translate(0% , " + st/15 + "%"    });
+
+        })
+        $(window).scroll(function(){
+            var st =$(this).scrollTop();
+
+            $('.wrapperContactUs .back').css({
+                "transform":"translate(0% , " + st/50 + "%"    });
 
         })
         $("#togNav").click(function(){
@@ -36,7 +43,7 @@
         });
 
         function centre(){
-            var b =  $(".mainLinkWrap");
+            var b =  $("#mainLinkWrap");
             var w = b.width();
             console.log(w/2)
             b.css("margin-left",-(w/2))
@@ -45,19 +52,14 @@
             $(".ourWork header h1").animated("slideInRight","slideOutRight",50,0)
             $(".ourWork header h3").animated("slideInRight","slideOutRight",50,0)
             $(".ourWork header div").animated("slideInRight","slideOutRight",50,30)
+            $(".text").animated("slideInRight","slideOutRight",145,-250)
+            $(".input").animated("slideInLeft","slideOutLeft",100,0)
         }
 
-        if($("#input5").val().match(/\S/g)==null){
-            console.log("ok")
-        }
-        console.log($("#input5").val().match(/\S/g))
-        console.log($("#input5").val().search(/[ ]+/))
-
-        console.log($("#input5").val().split(/\W/))
         $(".inputField").each(function(){
 
 
-            if ($(this).val() !== '' || $(this).val().match(/\S/g)==null) {
+            if ($(this).val() !== '' || $(this).val().match(/\S/g)!==null) {
 
                 var par = $(this).parent();
                 par.addClass('inputFilled')
@@ -70,7 +72,7 @@
 
             $(this).on("blur",function(){
                 if($(this).val()=='' || $(this).val().match(/\S/g)==null){
-
+                    $(this).val("")
                     var par =  $(this).parent();
                     par.removeClass('inputFilled')
                 }
