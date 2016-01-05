@@ -11,10 +11,10 @@
             var afterDirection = (sliderOrientation === 'vertical') ? 'up' : 'right';
 
 
-            container.wrap("<div class='twentytwenty-wrapper twentytwenty-" + sliderOrientation + "'></div>");
-            container.append("<div class='twentytwenty-overlay'></div>");
-            var beforeImg = container.find("img:first");
-            var afterImg = container.find("img:last");
+
+
+            var beforeImg = container.find("div:first");
+            var afterImg = container.find("div:last");
             container.append("<div class='twentytwenty-handle'></div>");
             var slider = container.find(".twentytwenty-handle");
             slider.append("<span class='twentytwenty-" + beforeDirection + "-arrow'></span>");
