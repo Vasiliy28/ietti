@@ -54,6 +54,7 @@
             $(".ourWork header div").animated("slideInRight","slideOutRight",50,30)
             $(".text").animated("slideInRight","slideOutRight",145,-250)
             $(".input").animated("slideInLeft","slideOutLeft",100,0)
+            $("#welcomeLog").animated("flipInY","flipOutY")
         }
 
         $(".inputField").each(function(){
@@ -81,5 +82,13 @@
                 }
             })
         })
+
+
+        $(window).load(function(){
+            $(".twentytwenty-container").twentytwenty({
+
+            });
+        });
+
     })
 
