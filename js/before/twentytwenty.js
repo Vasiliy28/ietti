@@ -10,9 +10,6 @@
             var beforeDirection = (sliderOrientation === 'vertical') ? 'down' : 'left';
             var afterDirection = (sliderOrientation === 'vertical') ? 'up' : 'right';
 
-
-
-
             var beforeImg = container.find("div.twentytwentyLeft");
             var afterImg = container.find("div.twentytwentyRight");
             container.append("<div class='twentytwenty-handle'></div>");
@@ -23,9 +20,7 @@
             beforeImg.addClass("twentytwenty-before");
             afterImg.addClass("twentytwenty-after");
 
-            var overlay = container.find(".twentytwenty-overlay");
-            overlay.append("<div class='twentytwenty-before-label'></div>");
-            overlay.append("<div class='twentytwenty-after-label'></div>");
+
 
             var calcOffset = function(dimensionPct) {
                 var w = beforeImg.width();
@@ -55,11 +50,14 @@
             }
 
             $(window).on("resize.twentytwenty", function(e) {
-                adjustSlider(sliderPct);
+                adjustSlider(0.5);
             });
 
             var offsetX = 0;
             var imgWidth = 0;
+            slider.on("movestart", function(e) {
+                container.addClass("active");
+            });
 
             slider.on("movestart", function(e) {
                 if (((e.distX > e.distY && e.distX < -e.distY) || (e.distX < e.distY && e.distX > -e.distY)) && sliderOrientation !== 'vertical') {
@@ -76,7 +74,10 @@
             });
 
             slider.on("moveend", function(e) {
+                adjustSlider(0.5);
                 container.removeClass("active");
+                console.log(sliderPct)
+
             });
 
             slider.on("move", function(e) {
