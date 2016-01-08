@@ -52,7 +52,7 @@
             $(".ourWork header div").animated("slideInRight","slideOutRight",50,30)
             $(".text").animated("slideInRight","slideOutRight",145,-250)
             $(".input").animated("slideInLeft","slideOutLeft",100,0)
-            $("#welcomeLog").animated("flipInY","flipOutY")
+            $("#welcomeLog").animated("flipInY","flipOutY",60,-30)
         }
 
         $(".inputField").each(function(){
@@ -125,6 +125,13 @@
             }
             else return
 
+
+
         });
+
+        $(".itemPage a").mPageScroll2id({
+            offset:60
+        });
+
     })
 
