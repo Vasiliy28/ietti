@@ -47,9 +47,9 @@
             b.css("margin-left",-(w/2))
         }
         function animateCss(){
-            $(".ourWork header h1").animated("slideInRight","slideOutRight",50,0)
-            $(".ourWork header h3").animated("slideInRight","slideOutRight",50,0)
-            $(".ourWork header div").animated("slideInRight","slideOutRight",50,30)
+            $("header.headerSection h1").animated("slideInRight","slideOutRight",50,0)
+            $("header.headerSection h3").animated("slideInRight","slideOutRight",50,0)
+            $("header.headerSection div").animated("slideInRight","slideOutRight",50,30)
             $(".text").animated("slideInRight","slideOutRight",145,-250)
             $(".input").animated("slideInLeft","slideOutLeft",100,0)
             $("#welcomeLog").animated("flipInY","flipOutY",60,-30)
@@ -89,12 +89,13 @@
         });
 
         function stickyHeader () {
-            var headerScrollPos = $('header').next().offset().top;
+            var headerScrollPos = $('#header').next().offset().top;
+            var header = $('#header');
             if($(window).scrollTop() > headerScrollPos) {
-                $('header').addClass('move');
+                header.addClass('move');
             }
             else if($(this).scrollTop() <= headerScrollPos) {
-                $('header').removeClass('move');
+                header.removeClass('move');
             }
         }
 
@@ -118,6 +119,10 @@
             hiddenHeader()
         });
         hiddenHeader();
+        if($(window).width()>767){
+            stickyHeader();
+        }
+
         $(window).on('scroll', function () {
             console.log($(window).width())
             if($(window).width()>767){
@@ -130,7 +135,7 @@
         });
 
         $(".itemPage a").mPageScroll2id({
-            offset:60
+            offset:59
         });
 
     })

@@ -9,30 +9,29 @@
 
 body {
     font-family: RobotoRegular;
+    color: #b1b1b1;
 }
 
 .backColSection{
     position: relative;
-
 }
 .backColSection:before{
     position: absolute;
     content: '';
     width: 100%;
     height: 100%;
-    opacity: 0.8;
+    opacity: 0.9;
     top: 0;
     left: 0;
-    background: -moz-linear-gradient(45deg, rgba(58, 58, 58, 1) 0%, rgba(99, 99, 99, 1) 20%, rgba(128, 128, 128, 1) 40%, rgba(133, 133, 133, 1) 50%, rgba(131, 131, 131, 1) 53%, rgba(128, 128, 128, 1) 60%, rgba(99, 99, 99, 1) 80%, rgba(58, 58, 58, 1) 100%); /* ff3.6+ */
-    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(58, 58, 58, 1)), color-stop(20%, rgba(99, 99, 99, 1)), color-stop(40%, rgba(128, 128, 128, 1)), color-stop(50%, rgba(133, 133, 133, 1)), color-stop(53%, rgba(131, 131, 131, 1)), color-stop(60%, rgba(128, 128, 128, 1)), color-stop(80%, rgba(99, 99, 99, 1)), color-stop(100%, rgba(58, 58, 58, 1))); /* safari4+,chrome */
-    background: -webkit-linear-gradient(45deg, rgba(58, 58, 58, 1) 0%, rgba(99, 99, 99, 1) 20%, rgba(128, 128, 128, 1) 40%, rgba(133, 133, 133, 1) 50%, rgba(131, 131, 131, 1) 53%, rgba(128, 128, 128, 1) 60%, rgba(99, 99, 99, 1) 80%, rgba(58, 58, 58, 1) 100%); /* safari5.1+,chrome10+ */
-    background: -o-linear-gradient(45deg, rgba(58, 58, 58, 1) 0%, rgba(99, 99, 99, 1) 20%, rgba(128, 128, 128, 1) 40%, rgba(133, 133, 133, 1) 50%, rgba(131, 131, 131, 1) 53%, rgba(128, 128, 128, 1) 60%, rgba(99, 99, 99, 1) 80%, rgba(58, 58, 58, 1) 100%); /* opera 11.10+ */
-    background: -ms-linear-gradient(45deg, rgba(58, 58, 58, 1) 0%, rgba(99, 99, 99, 1) 20%, rgba(128, 128, 128, 1) 40%, rgba(133, 133, 133, 1) 50%, rgba(131, 131, 131, 1) 53%, rgba(128, 128, 128, 1) 60%, rgba(99, 99, 99, 1) 80%, rgba(58, 58, 58, 1) 100%); /* ie10+ */
-    background: linear-gradient(45deg, rgba(58, 58, 58, 1) 0%, rgba(99, 99, 99, 1) 20%, rgba(128, 128, 128, 1) 40%, rgba(133, 133, 133, 1) 50%, rgba(131, 131, 131, 1) 53%, rgba(128, 128, 128, 1) 60%, rgba(99, 99, 99, 1) 80%, rgba(58, 58, 58, 1) 100%); /* w3c */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3a3a3a', endColorstr='#3a3a3a', GradientType=1); /* ie6-9 */
-z-index: -1;
+    background-color: #222222;
+    z-index: -1;
 }
-
+.backImg{
+    overflow: hidden;
+    background: url(../img/room5.jpg) no-repeat center center fixed;
+    background-size: cover;
+    z-index: 1;
+}
 
 .iconGroup {
     list-style: none;
@@ -58,6 +57,9 @@ z-index: -1;
     width: 100%;
     z-index: 9999;
 }
+.header.backColSection::before{
+    opacity: 0.8;
+}
 
 /*navPage*/
 .navPage{
@@ -80,7 +82,7 @@ z-index: -1;
 
 }
 .itemPage li a{
-    color: #30302F;
+    color: #dbdbdb;
     line-height: 40px;
     text-decoration: none;
     outline: none;
@@ -414,26 +416,50 @@ z-index: -1;
 /*↑↑↑↑↑↑↑mainPicture↑↑↑↑↑↑*/
 /*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
 
-
-.ourWork header {
+.backColSection .headerSection{
+    color: white;
+}
+.headerSection {
     text-align: center;
-    color: #30302F;
+
     max-width: 240px;
     margin: 0 auto;
 }
 
-.ourWork header h1 {
+.headerSection h1 {
     font-weight: 800;
     text-transform: uppercase;
     opacity: 0;
 }
 
-.ourWork header h3 {
+.headerSection h3 {
     margin-top: 0;
     opacity: 0;
 }
 
+.headerSection div {
+    opacity: 0;
+}
 
+.headerSection div span.sep {
+    border-bottom: 3px solid #CCFF33;
+    display: block;
+    width: 250px;
+    margin: 20px auto;
+
+}
+
+.headerSection div:nth-child(3) span.sep {
+    width: 100%;
+}
+
+.headerSection div:nth-child(4) span.sep {
+    width: 60%;
+}
+
+.headerSection div:nth-child(5) span.sep {
+    width: 40%;
+}
 
 
 
@@ -445,19 +471,24 @@ z-index: -1;
 /*******************************************************************************************************************/
 /******welcome**********/
 
-
+.wrapperWelcome{
+    color:#b1b1b1!important;
+}
+.welcome{
+    margin-bottom: 20px;
+}
 .welcomeContent figure {
     max-width: 350px;
     max-height: 240px;
     position: relative;
-    margin: 0 auto;
+    margin: 40px auto 0;
     z-index: 1;
     overflow: hidden;
     border-radius: 100%;
     -webkit-box-shadow: 0px 0px 15px 15px rgba(58, 58, 58, 1);
     -moz-box-shadow: 0px 0px 15px 15px rgba(58, 58, 58, 1);
     box-shadow: 0px 0px 15px 15px rgba(58, 58, 58, 1);
-
+   background-color: #b1b1b1;
 }
 
 .welcomeContent figure img {
@@ -469,6 +500,33 @@ z-index: -1;
     margin-left: 7.5%;
 }
 
+.welcomeContent h2{
+    text-align: center;
+    text-transform: uppercase;
+
+}
+.welcomeContent h3{
+    color: white;
+    font-style: italic;
+    font-weight: 100;
+}
+.welcomeContent > div{
+    padding: 0 15px;
+}
+.welcomeContent > div:first-child,
+.welcomeContent > div:last-child{
+    margin-top: -50px;
+}
+
+.welcomeContent ul:not(.iconGroup){
+    list-style: none;
+    padding: 0 0 0 15px;
+}
+.welcomeContent ul:not(.iconGroup) li:before {
+    content: '\27A4';
+    margin-right: 5px;
+    color: #CCFF33;
+}
 /*↑↑↑↑↑↑↑welcome↑↑↑↑↑↑*/
 /*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
 
@@ -478,9 +536,11 @@ z-index: -1;
 /*********************************************************************************************************************/
 
 /*******ourHistory**********/
+.wrapperOurHistory{
+    color: #222222;
+}
 
-
-.ourHistoryContent > div:nth-child(3) {
+.ourHistoryContent > .leftHistory {
     border-right: 2px solid black;
     text-align: right;
 }
@@ -731,29 +791,7 @@ nav.workMenu ul li.active span {
     transition: height 0.4s;
 }
 
-.ourWork header div {
-    opacity: 0;
-}
 
-.ourWork header div span.sep {
-    border-bottom: 3px solid #CCFF33;
-    display: block;
-    width: 250px;
-    margin: 20px auto;
-
-}
-
-.ourWork div:nth-child(3) span.sep {
-    width: 100%;
-}
-
-.ourWork div:nth-child(4) span.sep {
-    width: 60%;
-}
-
-.ourWork div:nth-child(5) span.sep {
-    width: 40%;
-}
 
 .mix {
     display: none;
@@ -796,10 +834,7 @@ nav.workMenu ul li.active span {
 /*******ContactUs*************/
 .wrapperContactUs {
     position: relative;
-    overflow: hidden;
-    background: url(../img/room1.jpg) no-repeat center center fixed;
-    background-size: cover;
-    z-index: 1;
+
 }
 
 .wrapperContactUs img.back {
