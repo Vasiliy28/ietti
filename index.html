@@ -32,6 +32,8 @@
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 </head>
+<body>
+<div id="page-preloader"><span class="spinner"></span></div>
 <header class="header backColSection" id="header">
     <div class="container">
         <div class="col-xs-1 hidden-xs">
@@ -144,13 +146,17 @@
     <div class="container ">
 
         <div class="ourHistory ">
-            <h1>How it all began...</h1>
+            <h1 style="opacity: 0">How it all began...</h1>
 
             <article class="ourHistoryContent ">
 
                 <div class="col-md-6 leftHistory">
-                    <h3>Past</h3>
-                    <i class="fa fa-thumbs-up fa-flip-horizontal"></i>
+                    <header>
+                        <i class="fa fa-thumbs-up fa-flip-horizontal"></i>
+                        <h3>Past</h3>
+                    </header>
+
+
                     <div class="history">
                         <header>Web-development</header>
                         <p class="year">206-2016</p>
@@ -180,8 +186,11 @@
                     </div>
                 </div>
                 <div class="col-md-6 rightHistory">
-                    <h3>Now</h3>
-                    <i class="fa fa-thumbs-o-up"></i>
+                    <header>
+                        <h3>Now</h3>
+                        <i class="fa fa-thumbs-o-up"></i>
+                    </header>
+
                     <div class="history">
                         <header>Web-development</header>
                         <p class="year">206-2016</p>

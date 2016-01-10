@@ -485,10 +485,6 @@ body {
     z-index: 1;
     overflow: hidden;
     border-radius: 100%;
-    -webkit-box-shadow: 0px 0px 15px 15px rgba(58, 58, 58, 1);
-    -moz-box-shadow: 0px 0px 15px 15px rgba(58, 58, 58, 1);
-    box-shadow: 0px 0px 15px 15px rgba(58, 58, 58, 1);
-   background-color: #b1b1b1;
 }
 
 .welcomeContent figure img {
@@ -540,14 +536,51 @@ body {
     color: #222222;
 }
 
+
+.ourHistoryContent >div > header,
+.ourHistoryContent h3{
+    display: inline-block;
+}
+.ourHistoryContent h3{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.ourHistoryContent i{
+    position: relative;
+    font-size: 300%;
+    color: #CCFF33;
+    margin:0 0 40px;
+
+}
+
 .ourHistoryContent > .leftHistory {
     border-right: 2px solid black;
     text-align: right;
+    padding-right: 30px;
 }
+.ourHistoryContent > .rightHistory {
 
+    padding-left: 30px;
+
+}
+.history{
+    opacity: 0;
+}
+.history header{
+    font-weight: 600;
+}
 .history p:not([class="year"]) {
     min-height: 60px;
+    color: #686868;
+    font-style: italic;
 }
+.history .year{
+
+   display: inline-block;
+    background-color:#CCFF33;
+    margin-top: 10px;
+}
+
 /*↑↑↑↑↑↑↑ourHistory↑↑↑↑↑↑*/
 /*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
 
@@ -1223,3 +1256,22 @@ textarea.inputField {
 }
 
 /*↑↑↑↑↑↑↑footer↑↑↑↑↑↑*/
+#page-preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    z-index: 100500;
+}
+
+#page-preloader .spinner {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    margin: -16px 0 0 -16px;
+}

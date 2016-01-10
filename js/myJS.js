@@ -1,4 +1,9 @@
-
+$(window).on('load', function () {
+    var $preloader = $('#page-preloader'),
+        $spinner   = $preloader.find('.spinner');
+    $spinner.fadeOut();
+    $preloader.delay(350).fadeOut('slow');
+});
     $(window).ready(function(){
         'use strict'
 
@@ -53,6 +58,11 @@
             $(".text").animated("slideInRight","slideOutRight",145,-250)
             $(".input").animated("slideInLeft","slideOutLeft",100,0)
             $("#welcomeLog").animated("flipInY","flipOutY",60,-30)
+            $('.leftHistory .history').animated("fadeInLeft","fadeOutDown",50,-50)
+            $('.rightHistory .history').animated("fadeInRight","fadeOutDown",50,-50)
+            $('.rightHistory .history').animated("fadeInRight","fadeOutDown",50,-50)
+            $('.ourHistory > h1').animated("rotateInUpLeft","rollOut",50,20)
+            $('.ourHistoryContent > div > header ').animated("bounceIn","bounceOut")
         }
 
         $(".inputField").each(function(){
