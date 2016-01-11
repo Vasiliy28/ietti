@@ -421,7 +421,6 @@ body {
 }
 .headerSection {
     text-align: center;
-
     max-width: 240px;
     margin: 0 auto;
 }
@@ -461,7 +460,10 @@ body {
     width: 40%;
 }
 
-
+.headerSectionLight{
+    display: inline-block;
+    opacity: 0;
+}
 
 
 
@@ -535,7 +537,9 @@ body {
 .wrapperOurHistory{
     color: #222222;
 }
-
+.ourHistory{
+    margin-bottom: 25px;
+}
 
 .ourHistoryContent >div > header,
 .ourHistoryContent h3{
@@ -554,7 +558,7 @@ body {
 }
 
 .ourHistoryContent > .leftHistory {
-    border-right: 2px solid black;
+
     text-align: right;
     padding-right: 30px;
 }
@@ -768,9 +772,15 @@ figure.ourWorkEffect:hover p a:first-child i {
 }
 
 .ourWork {
-    min-height: 100%;
-}
+    margin-bottom: 35px;
 
+}
+.wrapperOurWork .container-fluid{
+    padding: 0;
+}
+.workMenu{
+    opacity: 0;
+}
 
 nav.workMenu ul {
     position: relative;
@@ -783,7 +793,7 @@ nav.workMenu ul {
 nav.workMenu ul li {
     position: relative;
     display: inline-block;
-    color: #30302F;
+    color: #b1b1b1;
     cursor: pointer;
     font-size: 22px;
     line-height: 22px;
@@ -859,7 +869,55 @@ nav.workMenu ul li.active span {
 /******************************************************************************************************************/
 
 /*******aboutUs*************/
+.wrapperAboutUs{
+    overflow: hidden;
+}
+.aboutCenter{
+    animation-duration:2s;
+}
+.aboutUs{
+    color: #222222;
+   margin-bottom: 20px;
+}
+.aboutUs article > div{
+    padding: 0 10px;
+    opacity: 0;
+}
+.aboutUs article h3{
+    margin-top: 0;
+}
 
+.aboutUs p,
+.listAbout{
+    color: #686868;
+    font-style: italic;
+}
+
+.listAbout{
+    list-style: none;
+    padding-left: 20px;
+}
+.listAbout li:before{
+    content: '\27A4';
+    margin-right: 5px;
+    color: #CCFF33;
+}
+.aboutUs .iconGroup{
+    position: relative;
+    display: inline-block;
+}
+.aboutUs .iconGroup::before{
+    content: " ";
+    position: absolute;
+    width:100%;
+    height: 10px;
+    top:calc(50% - 5px);
+    left: 0;
+    opacity: 0.6;
+    z-index: -1;
+    background-color: black;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 1);
+}
 /*↑↑↑↑↑↑↑aboutUs↑↑↑↑↑↑*/
 
 

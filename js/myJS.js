@@ -60,11 +60,20 @@ $(window).on('load', function () {
             $("#welcomeLog").animated("flipInY","flipOutY",60,-30)
             $('.leftHistory .history').animated("fadeInLeft","fadeOutDown",50,-50)
             $('.rightHistory .history').animated("fadeInRight","fadeOutDown",50,-50)
-            $('.rightHistory .history').animated("fadeInRight","fadeOutDown",50,-50)
-            $('.ourHistory > h1').animated("rotateInUpLeft","rollOut",50,20)
-            $('.ourHistoryContent > div > header ').animated("bounceIn","bounceOut")
-        }
+            $('.headerSectionLight').animated("rollIn","rollOut",50,0)
+            $('.ourHistoryContent > div > header ').animated("bounceIn","bounceOut",20,15)
+            $('.workMenu').animated("fadeInLeft","fadeOutLeft",30,50)
+            $(".aboutCenter").animated("fadeIn","fadeOut",30,-300)
+            $(".aboutLeft").animated("fadeInLeft","fadeOutLeft",30,-300)
+            $(".aboutRight").animated("fadeInRight","fadeOutRight",30,-300)
 
+        }
+        $('.aboutCenter').waypoint(function(){
+            console.log("okr")
+        })
+        $('.aboutLeft').waypoint(function(){
+            console.log("okl")
+        })
         $(".inputField").each(function(){
 
 
