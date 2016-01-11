@@ -882,6 +882,9 @@ nav.workMenu ul li.active span {
     color: #222222;
    margin-bottom: 20px;
 }
+.aboutUs header{
+    padding: 0 10px 0;
+}
 .aboutUs article > div{
     padding: 0 10px;
     opacity: 0;
@@ -929,7 +932,7 @@ nav.workMenu ul li.active span {
 .wrapperContactUs {
     position: relative;
     overflow: hidden;
-
+    padding-bottom: 30px;
 }
 
 .wrapperContactUs img.back {
@@ -1135,7 +1138,7 @@ textarea.inputField {
     -webkit-backface-visibility: hidden;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 600;
-
+    opacity: 0;
     overflow: hidden;
     padding: 0;
     width: 230px;
@@ -1232,38 +1235,59 @@ textarea.inputField {
 /**********************************************************************************************************************/
 /*****ourTeam*********/
 
-.ourTeam figure {
+.ourTeam header{
+    margin: 0 auto 40px;
+    max-width: 200px;
+    display: block;
+    color: #222222;
+    border-bottom: 4px solid #CCFF33;
+    text-align: center;
+}
+.ourTeamContent figure {
     overflow: auto;
+    padding: 20px;
+    opacity: 0;
 }
 
-.ourTeam figure img {
+.ourTeamContent figure img {
     display: block;
     width: 100%;
     max-width: 230px;
     border-radius: 100%;
     clear: both;
+    margin: 20px;
+    border: 4px solid #CCFF33;
 }
 
-.ourTeam figure figcaption {
+.ourTeamContent figure figcaption {
     overflow: hidden;
     height: 100%;
+    color: #686868;
+}
+.ourTeamContent figure figcaption h1{
+    color: #222222;
 }
 
-.ourTeam > div:nth-child(1) figure img {
+.ourTeamContent figure figcaption p{
+    font-style: italic;
+}
+.ourTeamContent > div:nth-child(1) figure img {
     float: right;
     clear: both;
+    margin: 0 0 0 25px;
 }
 
-.ourTeam > div:nth-child(2) figure img {
+.ourTeamContent > div:nth-child(2) figure img {
     float: left;
+    margin: 0 25px 0 0;
 }
 
-.ourTeam > div:nth-child(1) figure figcaption {
+.ourTeamContent > div:nth-child(1) figure figcaption {
     text-align: right;
 
 }
 
-.ourTeam > div:nth-child(2) figure figcaption {
+.ourTeamContent > div:nth-child(2) figure figcaption {
     text-align: left;
 }
 
@@ -1288,15 +1312,54 @@ textarea.inputField {
 
 .prices > div{
     padding: 10px;
+
 }
-.price{
+.priceing {
     width: 100%;
     max-width: 300px;
     margin: 0 auto;
+    border-radius: 15px;
+    background-color: #222222;
+    padding: 20px;
+    color: #b1b1b1;
     text-align: center;
-    border: 1px solid black;
 }
+.priceing header{
+    text-align: center;
+    border-bottom: 3px solid black;
+}
+.priceing header h1{
+    margin-top: 0;
+}
+.price{
+    padding:0.75em 0 ;
+    font-size: 1.75em;
+color: #CCFF33;
 
+}
+.priceing p{
+    font-weight: bold;
+}
+.priceing ul{
+    margin: 10px 0;
+    text-align: left;
+    padding-left: 15px;
+
+}
+.priceing i{
+    color:#CCFF33;
+    font-size: 250%;
+}
+.priceing a{
+    display: block;
+
+    font-size: 24px;
+    width: 100%;
+    border-radius: 10px;
+    color: #0f0f0f;
+    background-color: #CCFF33;
+    cursor: pointer;
+}
 /*↑↑↑↑↑↑↑price↑↑↑↑↑↑*/
 /*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
 
