@@ -892,6 +892,9 @@ nav.workMenu ul li.active span {
 .aboutUs article h3{
     margin-top: 0;
 }
+.aboutCenter{
+    overflow: hidden;
+}
 
 .aboutUs p,
 .listAbout{
@@ -1310,9 +1313,37 @@ textarea.inputField {
 /***********************************************************************************************************************/
 /*****price********/
 
+.wrapperPrice{
+    position: relative;
+}
+.wrapperPrice > span{
+
+    display: block;
+    position: absolute;
+    height:50%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    opacity: 0.9;
+    background-color: #222222;
+    z-index: -10;
+}
+
 .prices > div{
     padding: 10px;
 
+}
+.prices > div:nth-child(1) .priceing{
+    animation-delay: 0.1s;
+}
+.prices > div:nth-child(2) .priceing{
+    animation-delay: 0.3s;
+}
+.prices > div:nth-child(3) .priceing{
+    animation-delay: 0.5s;
+}
+.prices > div:nth-child(4) .priceing{
+    animation-delay: 0.7s;
 }
 .priceing {
     width: 100%;
@@ -1323,6 +1354,9 @@ textarea.inputField {
     padding: 20px;
     color: #b1b1b1;
     text-align: center;
+    z-index: 10;
+    max-height: 425px;
+    opacity: 0;
 }
 .priceing header{
     text-align: center;
@@ -1334,7 +1368,7 @@ textarea.inputField {
 .price{
     padding:0.75em 0 ;
     font-size: 1.75em;
-color: #CCFF33;
+    color: #CCFF33;
 
 }
 .priceing p{
@@ -1344,7 +1378,7 @@ color: #CCFF33;
     margin: 10px 0;
     text-align: left;
     padding-left: 15px;
-
+  min-height: 140px;
 }
 .priceing i{
     color:#CCFF33;
@@ -1352,14 +1386,17 @@ color: #CCFF33;
 }
 .priceing a{
     display: block;
-
     font-size: 24px;
     width: 100%;
     border-radius: 10px;
     color: #0f0f0f;
     background-color: #CCFF33;
     cursor: pointer;
+    outline: none;
+    text-decoration: none;
+
 }
+
 /*↑↑↑↑↑↑↑price↑↑↑↑↑↑*/
 /*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
 
@@ -1376,7 +1413,8 @@ color: #CCFF33;
 /********footer********/
 
 .mainFooter{
-    min-height: 600px;
+padding: 30px 0;
+
 }
 .iconsGroupFooter a {
     display: inline-block;
@@ -1412,6 +1450,18 @@ color: #CCFF33;
 .iconsGroupFooter a:nth-child(1) i {
 
     padding: 11px 16px;
+}
+.footerLinks ul{
+    list-style: none;
+    padding: 0;
+}
+.footerLinks ul a{
+    color: #b1b1b1;
+}
+.footerAbout,
+.footerLinks,
+.footerFfollow{
+    padding: 15px;
 }
 
 /*↑↑↑↑↑↑↑footer↑↑↑↑↑↑*/

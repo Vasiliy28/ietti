@@ -65,13 +65,14 @@ $(window).on('load', function () {
             $('.headerSectionLight').animated("rollIn","rollOut",50,-150)
             $('.ourHistoryContent > div > header ').animated("bounceIn","bounceOut",20,15)
             $('.workMenu').animated("fadeInLeft","fadeOutLeft",30,50)
-            $(".aboutCenter").animated("fadeIn","fadeOut",30,-300)
+            $(".aboutCenter").animated("zoomIn","zoomOut",-100,-250)
             $(".aboutLeft").animated("fadeInLeft","fadeOutLeft",30,-300)
             $(".aboutRight").animated("fadeInRight","fadeOutRight",30,-300)
             $(".contactUsBox").animated("zoomIn","zoomOut",20,0)
             $('.contactUs header').animated('slideInDown','slideOutUp',20,-100)
             $('.ourTeamLeft figure').animated("fadeInLeft","zoomOut",20,-20)
             $('.ourTeamRight figure').animated("fadeInRight","zoomOut",20,-20)
+            $('.priceing').animated("zoomIn","zoomOut",-70 , -50)
         }
         $('.aboutCenter').waypoint(function(){
             console.log("okr")
@@ -161,12 +162,6 @@ $(window).on('load', function () {
         $(".itemPage a").mPageScroll2id({
             offset:59
         });
-        marginPrice();
-        function marginPrice(){
-           var price= $('.wrapperPrice')
-            var heightPrice = price.height();
-            price.css("margin-bottom",-heightPrice/2);
-        }
 
     })
 
