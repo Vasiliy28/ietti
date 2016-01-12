@@ -72,7 +72,9 @@ $(window).on('load', function () {
             $('.contactUs header').animated('slideInDown','slideOutUp',20,-100)
             $('.ourTeamLeft figure').animated("fadeInLeft","zoomOut",20,-20)
             $('.ourTeamRight figure').animated("fadeInRight","zoomOut",20,-20)
-            $('.priceing').animated("zoomIn","zoomOut",-70 , -50)
+            $('.priceing').animated("zoomIn","zoomOut",-100 , -50)
+            $('.welcomeContentLeft').animated("zoomInLeft","zoomOutLeft",20,-50)
+            $('.welcomeContentRight').animated("zoomInRight","zoomOutRight",-20,-50)
         }
         $('.aboutCenter').waypoint(function(){
             console.log("okr")
