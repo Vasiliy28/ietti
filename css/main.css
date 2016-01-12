@@ -66,6 +66,7 @@ body {
 /*navPage*/
 .navPage{
     height: 100%;
+    margin: 0 0 0 20px;
 }
 .itemPage{
     padding: 0;
@@ -99,10 +100,28 @@ body {
     z-index: -1;
     opacity: 0;
 }
+.itemPage li.active span{
+    opacity: 1;
+    border: none;
+    border-bottom: 3px solid #CCFF33;
+}
+.itemPage li.active a,
+.itemPage li.click a,
+.itemPage li.active,
+.itemPage li.click{
+    cursor: default;
+    pointer-events: none;
+}
+.itemPage li.click:hover span{
+    opacity: 0;
+    transition: opacity 0.4s;
+}
 .itemPage li:hover span{
     opacity: 1;
     transition: opacity 0.4s;
 }
+
+
 /*↑navPage↑*/
 /*logo*/
 .logo {

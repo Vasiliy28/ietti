@@ -72,7 +72,7 @@ $(window).on('load', function () {
             $('.contactUs header').animated('slideInDown','slideOutUp',20,-100)
             $('.ourTeamLeft figure').animated("fadeInLeft","zoomOut",20,-20)
             $('.ourTeamRight figure').animated("fadeInRight","zoomOut",20,-20)
-            $('.priceing').animated("zoomIn","zoomOut",-100 , -50)
+            $('.priceing').animated("zoomIn","zoomOut",-100 , -70)
             $('.welcomeContentLeft').animated("zoomInLeft","zoomOutLeft",20,-50)
             $('.welcomeContentRight').animated("zoomInRight","zoomOutRight",-20,-50)
         }
@@ -164,6 +164,42 @@ $(window).on('load', function () {
         $(".itemPage a").mPageScroll2id({
             offset:59
         });
+        currentPage()
+        function currentPage(){
+            var nav=$('#navPage .itemPage li');
+            nav.children('a').on('click',function(){
+                nav.removeClass('click')
+                $(this).parent().addClass('click')
+            });
+            $('.tracked').waypoint(function(dir){
+                if (dir === "down"){
+                    var hash=$(this).attr('id');
+                    nav.removeClass('active')
+
+                    $.each(nav,function(){
+                        if($(this).children('a').attr('href').slice(1) == hash){
+                            $(this).addClass('active')
+                            $(this).removeClass('click')
+                        }
+                    })
+                }
+                else return;
+            },{offset:'30%'}).waypoint(function(dir){
+                if (dir === "up"){
+                    var hash=$(this).attr('id');
+                    nav.removeClass('active')
+                    $.each(nav,function(){
+                        if($(this).children('a').attr('href').slice(1) == hash){
+                            $(this).addClass('active')
+                            $(this).removeClass('click')
+                            console.log('ok')
+                        }
+                    })
+                }
+                else return;
+
+            },{offset:"-50%"})
+        }
 
     })
 
