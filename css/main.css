@@ -1,6 +1,6 @@
 
 .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
-    padding: 0px;
+    padding: 0;
 }
 .form-horizontal .form-group{
     margin: 0;
@@ -11,47 +11,110 @@
 
 body {
     font-family: RobotoRegular;
-    color: #b1b1b1;
+
+}
+body >section{
+    position: relative;
+    overflow: hidden;
 }
 
-.backColSection{
-    position: relative;
+
+.headerSection {
+    text-align: center;
+    max-width: 240px;
+    margin: 0 auto;
+    color: #FFFFFF;
 }
-.backColSection:before{
+
+.headerSection h1 {
+    font-weight: 800;
+    text-transform: uppercase;
+    opacity: 0;
+}
+
+.headerSection h3 {
+    margin-top: 0;
+    opacity: 0;
+}
+
+.headerSection div {
+    opacity: 0;
+}
+
+.headerSection div span.sep {
+    border-bottom: 3px solid #CCFF33;
+    display: block;
+    width: 250px;
+    margin: 20px auto;
+
+}
+
+.headerSection div:nth-child(3) span.sep {
+    width: 100%;
+}
+
+.headerSection div:nth-child(4) span.sep {
+    width: 60%;
+}
+
+.headerSection div:nth-child(5) span.sep {
+    width: 40%;
+}
+
+.headerSectionLight{
+    display: inline-block;
+    opacity: 0;
+}
+
+.backgroundDark:before,
+.backgroundLight:before{
     position: absolute;
     content: '';
     width: 100%;
     height: 100%;
-    opacity: 0.9;
     top: 0;
     left: 0;
-    background-color: #222222;
-    z-index: -1;
+
 }
-.backImg{
-    overflow: hidden;
+.backgroundDark{
     background: url(../img/room5.jpg) no-repeat center center fixed;
     background-size: cover;
     z-index: 1;
+    color:#b1b1b1
 }
+.backgroundLight {
+    background: url(../img/codepen.svg)  repeat center center fixed;
+    background-size: 500px;
+    z-index: 1;
+    color: #222222;
+}
+.backgroundDark:before{
+    background-color: #222222;
+    opacity: 0.9;
+    z-index: -1;
 
+}
+.backgroundLight:before{
+    background-color: #ffffff;
+    z-index: -60;
+    opacity: 0.3;
+}
 .iconGroup {
     list-style: none;
     padding: 0;
 }
-
 .iconGroup li {
     display: inline-block;
 }
-
 .iconGroup li a {
     color: #CCFF33;
     margin: 0 5px 0 0;
     outline: none;
     font-size: 150%;
 }
-/*******************************************************************************************************/
+
 /**********header**********/
+
 .header{
     position: fixed!important;
     top: 0;
@@ -59,38 +122,45 @@ body {
     width: 100%;
     z-index: 9999;
 }
-.header.backColSection::before{
+.header.backgroundDark:before{
     opacity: 0.8;
+}
+.header.backgroundDark{
+    background: none;
 }
 
 /*navPage*/
-.navPage{
+.navPage {
     height: 100%;
     margin: 0 0 0 20px;
 }
-.itemPage{
+
+.itemPage {
     padding: 0;
     position: relative;
     margin-top: 15px;
     transition: all 0.5s ease 0s;
 }
-.itemPage li{
+
+.itemPage li {
     display: inline-block;
     font-size: 18px;
     position: relative;
     cursor: pointer;
     text-transform: uppercase;
-    line-height: 40px;
+
     padding: 0 10px;
 
 }
-.itemPage li a{
+
+.itemPage li a {
     color: #dbdbdb;
     line-height: 40px;
     text-decoration: none;
     outline: none;
 }
-.itemPage li span{
+
+.itemPage li span {
     position: absolute;
     top: 0;
     left: 0;
@@ -100,29 +170,33 @@ body {
     z-index: -1;
     opacity: 0;
 }
-.itemPage li.active span{
+
+.itemPage li.active span {
     opacity: 1;
     border: none;
     border-bottom: 3px solid #CCFF33;
 }
+
 .itemPage li.active a,
 .itemPage li.click a,
 .itemPage li.active,
-.itemPage li.click{
+.itemPage li.click {
     cursor: default;
     pointer-events: none;
 }
-.itemPage li.click:hover span{
+
+.itemPage li.click:hover span {
     opacity: 0;
     transition: opacity 0.4s;
 }
-.itemPage li:hover span{
+
+.itemPage li:hover span {
     opacity: 1;
     transition: opacity 0.4s;
 }
+/*navPage*/
 
 
-/*↑navPage↑*/
 /*logo*/
 .logo {
     position: relative;
@@ -148,9 +222,7 @@ body {
 }
 
 .logo span {
-
     position: absolute;
-
     width: 70%;
     height: 40%;
     top: 30%;
@@ -176,7 +248,7 @@ body {
 .logo:hover img:nth-child(2) {
     display: block;
 }
-/*↑logo↑*/
+/*logo*/
 
 /*move*/
 .header.move .logo{
@@ -202,78 +274,92 @@ body {
 
 }
 /*↑move↑*/
+
+
 /*hamburgerButton*/
-.si-icon {
+.wrapperHamburger-icon{
     position: fixed;
-    display: inline-block;
-    width: 64px;
-    height: 64px;
-    margin: 40px 30px;
-    cursor: pointer;
-    background-repeat: no-repeat;
-    background-position: center center;
-    z-index: 99999;
+    top: 5%;
     right: 10%;
-    transition: all 0.2s ease 0s;
+    z-index: 9999;
+}
+.hamburger-icon {
+    width: 60px;
+    height: 30px;
+    position: relative;
+    display: block;
+    outline: none;
 
 }
-
-.si-icon span {
+.hamburger-icon:focus{
+    outline: none;
+}
+.hamburger-icon::before{
     position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: #3a3a3a;
-    opacity: 0.6;
-    z-index: -1;
+    content: '';
+    top: -18px;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: calc(100% + 40px);
+    background-color: #0b0b0b;
+  opacity: 0.5;
+}
+.hamburger-icon .line {
+    display: block;
+    background: #CCFF33;
+    width: 60px;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    border-radius: 4px;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
 
 }
-
-.si-icon:hover {
-    -webkit-box-shadow: 0px 0px 22px -4px rgba(0, 0, 0, 0.47);
-    -moz-box-shadow: 0px 0px 22px -4px rgba(0, 0, 0, 0.47);
-    box-shadow: 0px 0px 22px -4px rgba(0, 0, 0, 0.47);
+.hamburger-icon .line.line-1 {
+    top: 0;
+}
+.hamburger-icon .line.line-2 {
+    top: 50% ;
+}
+.hamburger-icon .line.line-3 {
+    top: 100% ;
 }
 
-.si-icon:hover svg path {
-    stroke: #CCFF33;
+.hamburger-icon:hover .line-1 {
+    transform: translateY(-4px);
+    -webkit-transform: translateY(-4px);
+    -moz-transform: translateY(-4px);
+}
+.hamburger-icon:hover .line-3{
+    transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    -moz-transform: translateY(4px);
+}
+.hamburger-icon.active .line-1 {
+    transform: translateY(15px) translateX(0) rotate(45deg);
+    -webkit-transform: translateY(15px) translateX(0) rotate(45deg);
+    -moz-transform: translateY(15px) translateX(0) rotate(45deg);
+}
+.hamburger-icon.active .line-2 {
+    opacity: 0;
+}
+.hamburger-icon.active .line-3 {
+    transform: translateY(-15px) translateX(0) rotate(-45deg);
+    -webkit-transform: translateY(-15px) translateX(0) rotate(-45deg);
+    -moz-transform: translateY(-15px) translateX(0) rotate(-45deg);
 }
 
-.no-svg .si-icon-hamburger-cross {
-    background-image: url('/img/png/hamburger1.png')
-}
 
 /*↑hamburgerButton↑*/
 
 /*↑↑↑↑↑↑↑↑*header*↑↑↑↑↑↑↑↑*/
 
-/*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/********************************************************************************************************************/
 /********mainPicture*******/
 
-.wrapperMainPicture {
-    position: relative;
-    overflow: hidden;
 
-}
 
 .wrapperMainPicture figure.back {
     position: absolute;
@@ -286,23 +372,16 @@ body {
 }
 
 .wrapperMainPicture figure.back img {
-    display: none;
+    display: block;
     width: 100%;
     opacity: 1;
     position: absolute;
-    -webkit-transition: opacity 2s;
-    -moz-transition: opacity 2s;
-    transition: opasity 4s;
 
 }
 
-.wrapperMainPicture figure.back img:first-child {
-    display: block;
-}
 /********mainButton**********/
 
 .mainLinkWrap {
-
     max-width: 100%;
     z-index: 1;
     position: absolute;
@@ -313,7 +392,6 @@ body {
     justify-content: center;
     bottom: 15%;
     left: 50%;
-
 }
 
 .mainLinkWrap > span {
@@ -394,7 +472,6 @@ body {
 
 .mainLink span {
     position: relative;
-
     -webkit-transition: color 0.3s;
     transition: color 0.3s;
 }
@@ -434,70 +511,13 @@ body {
     transform: translate3d(0, 0, 0);
 }
 
-/*↑↑↑↑↑↑↑↑*mainButton*↑↑↑↑↑↑↑↑*/
+
 /*↑↑↑↑↑↑↑mainPicture↑↑↑↑↑↑*/
-/*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
-
-.backColSection .headerSection{
-    color: white;
-}
-.headerSection {
-    text-align: center;
-    max-width: 240px;
-    margin: 0 auto;
-}
-
-.headerSection h1 {
-    font-weight: 800;
-    text-transform: uppercase;
-    opacity: 0;
-}
-
-.headerSection h3 {
-    margin-top: 0;
-    opacity: 0;
-}
-
-.headerSection div {
-    opacity: 0;
-}
-
-.headerSection div span.sep {
-    border-bottom: 3px solid #CCFF33;
-    display: block;
-    width: 250px;
-    margin: 20px auto;
-
-}
-
-.headerSection div:nth-child(3) span.sep {
-    width: 100%;
-}
-
-.headerSection div:nth-child(4) span.sep {
-    width: 60%;
-}
-
-.headerSection div:nth-child(5) span.sep {
-    width: 40%;
-}
-
-.headerSectionLight{
-    display: inline-block;
-    opacity: 0;
-}
 
 
-
-
-
-
-/*******************************************************************************************************************/
 /******welcome**********/
 
-.wrapperWelcome{
-    color:#b1b1b1!important;
-}
+
 .welcome{
     margin-bottom: 20px;
 }
@@ -555,17 +575,10 @@ body {
 
 
 /*↑↑↑↑↑↑↑welcome↑↑↑↑↑↑*/
-/*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
 
-
-
-
-/*********************************************************************************************************************/
 
 /*******ourHistory**********/
-.wrapperOurHistory{
-    color: #222222;
-}
+
 .ourHistory{
     margin-bottom: 25px;
 }
@@ -586,13 +599,11 @@ body {
 
 }
 
-.ourHistoryContent > .leftHistory {
-
+.leftContentHistory {
     text-align: right;
     padding-right: 30px;
 }
-.ourHistoryContent > .rightHistory {
-
+.rightContentHistory {
     padding-left: 30px;
 
 }
@@ -608,19 +619,19 @@ body {
     font-style: italic;
 }
 .history .year{
-
-   display: inline-block;
+    display: inline-block;
     background-color:#CCFF33;
     margin-top: 10px;
+    padding: 5px 10px;
 }
 
 /*↑↑↑↑↑↑↑ourHistory↑↑↑↑↑↑*/
-/*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
 
 
 
 
-/***********************************************************************************************************/
+
+
 /********ourWork******/
 
 
@@ -629,14 +640,13 @@ figure.ourWorkEffect {
     position: relative;
     float: left;
     overflow: hidden;
-
     min-width: 320px;
-    max-width: 480px;
+
     max-height: 360px;
     width: 100%;
-
     text-align: center;
     cursor: pointer;
+
 }
 
 figure.ourWorkEffect img {
@@ -738,7 +748,7 @@ nav.workMenu ul {
 nav.workMenu ul li {
     position: relative;
     display: inline-block;
-    color: #b1b1b1;
+
     cursor: pointer;
     font-size: 22px;
     line-height: 22px;
@@ -814,12 +824,9 @@ nav.workMenu ul li.active span {
 /******************************************************************************************************************/
 
 /*******aboutUs*************/
-.wrapperAboutUs{
-    overflow: hidden;
-}
 
 .aboutUs{
-    color: #222222;
+
    margin-bottom: 20px;
 }
 .aboutUs header{
@@ -832,7 +839,7 @@ nav.workMenu ul li.active span {
 .aboutUs article h3{
     margin-top: 0;
 }
-.aboutCenter{
+.aboutUsContentCenter {
     overflow: hidden;
 }
 
@@ -870,24 +877,14 @@ nav.workMenu ul li.active span {
 /*↑↑↑↑↑↑↑aboutUs↑↑↑↑↑↑*/
 
 
-/*****************************************************************************************************************/
+
 /*******ContactUs*************/
 .wrapperContactUs {
-    position: relative;
-    overflow: hidden;
+
     padding-bottom: 30px;
 }
 
-.wrapperContactUs img.back {
-    display: block;
-    position: absolute;
-    top: -100%;
-    left: 0;
-    width: 100%;
-    height: auto;
-    z-index: -1;
 
-}
 
 .contactUs header {
     text-align: center;
@@ -913,7 +910,7 @@ nav.workMenu ul li.active span {
     opacity: 0;
 }
 
-.hid {
+.contactUsForm {
     overflow: hidden;
 }
 
@@ -1163,16 +1160,6 @@ textarea.inputField {
 }
 
 /*↑↑↑↑↑↑↑ContactUs↑↑↑↑↑↑*/
-/*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
-
-
-
-
-
-
-
-
-
 
 
 /**********************************************************************************************************************/
@@ -1182,7 +1169,7 @@ textarea.inputField {
     margin: 0 auto 40px;
     max-width: 200px;
     display: block;
-    color: #222222;
+
     border-bottom: 4px solid #CCFF33;
     text-align: center;
 }
@@ -1193,7 +1180,7 @@ textarea.inputField {
 }
 
 .ourTeamContent figure img {
-
+ 
     display: block;
     width: 100%;
     max-width: 230px;
@@ -1201,7 +1188,7 @@ textarea.inputField {
     clear: both;
     margin: 20px;
     border: 4px solid #CCFF33;
-    background-color: #222222;
+
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
 }
@@ -1218,9 +1205,7 @@ textarea.inputField {
     height: 100%;
     color: #686868;
 }
-.ourTeamContent figure figcaption h1{
-    color: #222222;
-}
+
 
 .ourTeamContent figure figcaption p{
     font-style: italic;
@@ -1268,18 +1253,20 @@ textarea.inputField {
     position: relative;
 }
 .wrapperPrice > span{
-
     display: block;
     position: absolute;
     height:50%;
     width: 100%;
     bottom: 0;
     left: 0;
-    opacity: 0.9;
-    background-color: #222222;
+    background-color: #373737;
     z-index: -10;
 }
-
+.wrapperPrice > span:nth-child(2){
+    top: 0;
+    background-color: #FFFFFF;
+    opacity: 0.3;
+}
 .prices > div{
     padding: 10px;
 

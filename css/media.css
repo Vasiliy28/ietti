@@ -46,6 +46,7 @@
 		opacity: 0;
 		transition: all 0.5s ease 0s;
 	}
+
 	header.headerHidden .navPage {
 		position: fixed;
 		top: 0;
@@ -57,7 +58,7 @@
 		pointer-events: none;
 		transition: all 0.5s ease 0s;
 		opacity: 0;
-
+margin: 0;
 	}
 
 	header.headerHidden .itemPage {
@@ -157,6 +158,14 @@
 		pointer-events: auto;
 		opacity: 1;
 	}
+	.itemPage li.active a,
+	.itemPage li.click a,
+	.itemPage li.active,
+	.itemPage li.click{
+		cursor: pointer;
+		pointer-events: auto;
+	}
+
 	/*↑↑↑↑↑↑↑header↑↑↑↑↑↑*/
 }
 

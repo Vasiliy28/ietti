@@ -6,7 +6,9 @@ $(window).on('load', function () {
 });
     $(window).ready(function(){
         'use strict'
-
+        $('.popup').magnificPopup({
+            type: 'image'
+        });
         function chengHeight() {
             var backImg = $('#back img');
             backImg.css("max-height",$(window).height())
@@ -60,23 +62,23 @@ $(window).on('load', function () {
             $("#text-1").animated("slideInRight","slideOutRight",145,-30)
             $(".buttonContactUs").animated("slideInLeft","slideOutLeft",50,0)
             $("#welcomeLog").animated("flipInY","flipOutY",60,-30)
-            $('.leftHistory .history').animated("fadeInLeft","fadeOutDown",50,-50)
-            $('.rightHistory .history').animated("fadeInRight","fadeOutDown",50,-50)
+            $('.leftContentHistory .history').animated("fadeInLeft","fadeOutDown",50,-50)
+            $('.rightContentHistory .history').animated("fadeInRight","fadeOutDown",50,-50)
             $('.headerSectionLight').animated("rollIn","rollOut",50,-150)
             $('.ourHistoryContent > div > header ').animated("bounceIn","bounceOut",20,15)
             $('.workMenu').animated("fadeInLeft","fadeOutLeft",30,50)
-            $(".aboutCenter").animated("zoomIn","zoomOut",-100,-250)
-            $(".aboutLeft").animated("fadeInLeft","fadeOutLeft",30,-300)
-            $(".aboutRight").animated("fadeInRight","fadeOutRight",30,-300)
+            $(".aboutUsContentCenter").animated("zoomIn","zoomOut",-100,-250)
+            $(".aboutUsContentLeft").animated("fadeInLeft","fadeOutLeft",30,-300)
+            $(".aboutUsContentRight").animated("fadeInRight","fadeOutRight",30,-300)
             $(".contactUsBox").animated("zoomIn","zoomOut",20,0)
             $('.contactUs header').animated('slideInDown','slideOutUp',20,-100)
             $('.ourTeamLeft figure').animated("fadeInLeft","zoomOut",20,-20)
             $('.ourTeamRight figure').animated("fadeInRight","zoomOut",20,-20)
-            $('.priceing').animated("zoomIn","zoomOut",-100 , -70)
+            $('.priceing').animated("zoomIn","zoomOut",-100 , -100)
             $('.welcomeContentLeft').animated("zoomInLeft","zoomOutLeft",20,-50)
             $('.welcomeContentRight').animated("zoomInRight","zoomOutRight",-20,-50)
         }
-        $('.aboutCenter').waypoint(function(){
+        $('.aboutUsContentCenter').waypoint(function(){
             console.log("okr")
         })
         $('.aboutLeft').waypoint(function(){
@@ -152,6 +154,7 @@ $(window).on('load', function () {
 
         $(window).on('scroll', function () {
             console.log($(window).width())
+            checkHeader();
             if($(window).width()>767){
                 stickyHeader();
             }
@@ -170,8 +173,10 @@ $(window).on('load', function () {
             nav.children('a').on('click',function(){
                 nav.removeClass('click')
                 $(this).parent().addClass('click')
+                $("#header").toggleClass('active')
+                $('#hamburger-icon').toggleClass('active')
             });
-            $('.tracked').waypoint(function(dir){
+            $('body > section').waypoint(function(dir){
                 if (dir === "down"){
                     var hash=$(this).attr('id');
                     nav.removeClass('active')
@@ -180,6 +185,7 @@ $(window).on('load', function () {
                         if($(this).children('a').attr('href').slice(1) == hash){
                             $(this).addClass('active')
                             $(this).removeClass('click')
+
                         }
                     })
                 }
@@ -192,6 +198,7 @@ $(window).on('load', function () {
                         if($(this).children('a').attr('href').slice(1) == hash){
                             $(this).addClass('active')
                             $(this).removeClass('click')
+
                             console.log('ok')
                         }
                     })
@@ -200,6 +207,16 @@ $(window).on('load', function () {
 
             },{offset:"-50%"})
         }
+        $( document ).ready(function() {
+            var hamburger = $('#hamburger-icon');
+            hamburger.click(function() {
+                hamburger.toggleClass('active');
+                $("#header").toggleClass('active')
+                return false;
+            });
+        });
+
+
 
     })
 
