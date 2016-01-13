@@ -10,12 +10,13 @@
 }
 
 body {
-    font-family: RobotoRegular;
+    font-family: 'RobotoRegular', sans-serif;
 
 }
 body >section{
     position: relative;
     overflow: hidden;
+    font-size: 16px;
 }
 
 
@@ -144,11 +145,10 @@ body >section{
 
 .itemPage li {
     display: inline-block;
-    font-size: 18px;
+    font-size: 20px;
     position: relative;
     cursor: pointer;
     text-transform: uppercase;
-
     padding: 0 10px;
 
 }
@@ -214,7 +214,7 @@ body >section{
     display: block;
     width: 100%;
     height: auto;
-    transition: all 0.5s ease 0s;
+    transition: all 0.2s ease 0s;
 }
 
 .logo img:nth-child(2) {
@@ -360,22 +360,25 @@ body >section{
 /********mainPicture*******/
 
 
+.wrapperMainPicture{
 
+
+}
 .wrapperMainPicture figure.back {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     width: 100%;
-    height: 100%;
     overflow: hidden;
+    height: 100%;
     z-index: -1;
 }
 
 .wrapperMainPicture figure.back img {
     display: block;
     width: 100%;
+    max-height: 100vh;
+   height: 100%;
     opacity: 1;
-    position: absolute;
+
 
 }
 
@@ -553,8 +556,8 @@ body >section{
 .welcomeContent > div{
     padding: 0 15px;
 }
-.welcomeContent > div:first-child,
-.welcomeContent > div:last-child{
+.welcomeContentLeft,
+.welcomeContentRight{
     margin-top: -50px;
 }
 
@@ -593,7 +596,7 @@ body >section{
 }
 .ourHistoryContent i{
     position: relative;
-    font-size: 300%;
+    font-size: 350%;
     color: #CCFF33;
     margin:0 0 40px;
 
@@ -614,7 +617,7 @@ body >section{
     font-weight: 600;
 }
 .history p:not([class="year"]) {
-    min-height: 60px;
+    min-height: 80px;
     color: #686868;
     font-style: italic;
 }
@@ -623,6 +626,7 @@ body >section{
     background-color:#CCFF33;
     margin-top: 10px;
     padding: 5px 10px;
+    font-weight: 600;
 }
 
 /*↑↑↑↑↑↑↑ourHistory↑↑↑↑↑↑*/
@@ -637,13 +641,16 @@ body >section{
 
 /*****OurWorkEffect******/
 figure.ourWorkEffect {
+    display: block;
     position: relative;
-    float: left;
+
     overflow: hidden;
     min-width: 320px;
-
-    max-height: 360px;
+    max-width: 475px;
+    margin: 0 auto;
     width: 100%;
+
+    height: auto;
     text-align: center;
     cursor: pointer;
 
@@ -653,7 +660,7 @@ figure.ourWorkEffect img {
     position: relative;
     display: block;
     min-height: 100%;
-    max-width: 100%;
+    width: 100%;
 
     -webkit-transition: -webkit-transform 0.5s;
     transition: transform 0.5s;
@@ -787,6 +794,7 @@ nav.workMenu ul li.active span {
     position: relative;
     clear: both;
     transition: height 0.4s;
+    padding: 20px 0;
 }
 
 
@@ -807,26 +815,11 @@ nav.workMenu ul li.active span {
 }
 
 /*↑↑↑↑↑↑↑ourWork↑↑↑↑↑↑*/
-/*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-/******************************************************************************************************************/
 
 /*******aboutUs*************/
 
 .aboutUs{
-
+   font-size: 16px;
    margin-bottom: 20px;
 }
 .aboutUs header{
@@ -854,6 +847,7 @@ nav.workMenu ul li.active span {
     padding-left: 20px;
 }
 .listAbout li:before{
+    font-size: 24px;
     content: '\27A4';
     margin-right: 5px;
     color: #CCFF33;
@@ -979,8 +973,8 @@ textarea.inputField {
     pointer-events: none;
     overflow: hidden;
     padding: 0 0.25em;
-    -webkit-transform: translate3d(0, 2.75em, 0);
-    transform: translate3d(1em, 2.75em, 0);
+    -webkit-transform: translate3d(0, 2.35em, 0);
+    transform: translate3d(1em, 2.35em, 0);
     -webkit-transition: -webkit-transform 0.3s;
     transition: transform 0.3s;
 
@@ -1162,7 +1156,7 @@ textarea.inputField {
 /*↑↑↑↑↑↑↑ContactUs↑↑↑↑↑↑*/
 
 
-/**********************************************************************************************************************/
+
 /*****ourTeam*********/
 
 .ourTeam header{
@@ -1174,7 +1168,7 @@ textarea.inputField {
     text-align: center;
 }
 .ourTeamContent figure {
-    overflow: auto;
+    overflow: hidden;
     padding: 20px;
     opacity: 0;
 }
@@ -1205,10 +1199,14 @@ textarea.inputField {
     height: 100%;
     color: #686868;
 }
-
+.ourTeamContent figure figcaption h1{
+    color: #222222;
+}
 
 .ourTeamContent figure figcaption p{
     font-style: italic;
+    font-weight: 100;
+    font-size: 14px;
 }
 .ourTeamContent > div:nth-child(1) figure img {
     float: right;
@@ -1232,40 +1230,24 @@ textarea.inputField {
 
 
 /*↑↑↑↑↑↑↑ourTeam↑↑↑↑↑↑*/
-/*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-/***********************************************************************************************************************/
 /*****price********/
 
-.wrapperPrice{
-    position: relative;
-}
 .wrapperPrice > span{
-    display: block;
     position: absolute;
-    height:50%;
+    display: block;
+    background: #222222;
     width: 100%;
-    bottom: 0;
+    height: 50%;
     left: 0;
-    background-color: #373737;
-    z-index: -10;
+    top: 30%;
+    opacity: 0.8;
 }
 .wrapperPrice > span:nth-child(2){
-    top: 0;
-    background-color: #FFFFFF;
-    opacity: 0.3;
+    background: transparent url(../img/room5.jpg) no-repeat center center fixed;
+    background-size: cover;
+    z-index: -1;
+    opacity: 1;
 }
 .prices > div{
     padding: 10px;
@@ -1295,13 +1277,16 @@ textarea.inputField {
     z-index: 10;
     max-height: 425px;
     opacity: 0;
+    font-size: 14px;
 }
 .priceing header{
     text-align: center;
     border-bottom: 3px solid black;
+    color: white;
 }
 .priceing header h1{
     margin-top: 0;
+
 }
 .price{
     padding:0.75em 0 ;
@@ -1336,23 +1321,13 @@ textarea.inputField {
 }
 
 /*↑↑↑↑↑↑↑price↑↑↑↑↑↑*/
-/*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
 
-
-
-
-
-
-
-
-
-
-/***********************************************************************************************************************/
 /********footer********/
 
 .mainFooter{
 padding: 30px 0;
-
+background: #383838;
+    color:#b1b1b1
 }
 .iconsGroupFooter a {
     display: inline-block;
@@ -1396,9 +1371,12 @@ padding: 30px 0;
 .footerLinks ul a{
     color: #b1b1b1;
 }
+.copy span{
+    color:#CCFF33 ;
+}
 .footerAbout,
 .footerLinks,
-.footerFfollow{
+.footerFollow{
     padding: 15px;
 }
 
@@ -1409,16 +1387,17 @@ padding: 30px 0;
     top: 0;
     right: 0;
     bottom: 0;
-    background: #000;
+    background: #222222;
     z-index: 100500;
+    opacity: 0.95;
 }
 
 #page-preloader .spinner {
-    width: 32px;
-    height: 32px;
+    width: 128px;
+    height: 128px;
     position: absolute;
     left: 50%;
     top: 50%;
-
-    margin: -16px 0 0 -16px;
+    background: url('../img/preload.GIF') no-repeat 50% 50%;
+    margin: -64px 0 0 -64px;
 }

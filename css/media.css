@@ -2,12 +2,58 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
+   .itemPage li{
+	   font-size: 18px;
+	   padding-right: 5px;
+	   margin-top: 5px;
+   }
+	.logo{
+		margin-top: 0;
+	}
+	.mainLink{
+		font-size: 5em;
+	}
+	.history p:not([class="year"]) {
+		min-height: 90px;
+
+	}
+	.priceing header h1{
+		font-size: 32px;
+	}
 
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
 
+
+	.header.move .logo img{
+		width: 100%;
+	}
+	.itemPage li{
+		font-size: 17px;
+		padding: 0 5px;
+	}
+	.navPage{
+		margin: 0 0 0 35px;
+	}
+	.itemPage li span,
+	.itemPage li.active span{
+		border-width: 2px;
+	}
+	.mainLink::before,
+	.mainLink::after{
+		height: 5px;
+	}
+	.welcomeContent figure{
+		margin: 0 auto;
+	}
+	.contactUsBox{
+
+		max-width: 200px;
+		width: 33.3333%;
+		float: left;
+	}
 }
 
 /* Small Devices, Tablets */
@@ -36,15 +82,14 @@
 	}
 
 	/*****header*********/
-	header{
-		opacity: 0;
-	}
+
 
 	header.headerHidden {
 		pointer-events: none;
 		background: none;
 		opacity: 0;
 		transition: all 0.5s ease 0s;
+
 	}
 
 	header.headerHidden .navPage {
@@ -58,7 +103,7 @@
 		pointer-events: none;
 		transition: all 0.5s ease 0s;
 		opacity: 0;
-margin: 0;
+        margin: 0;
 	}
 
 	header.headerHidden .itemPage {
@@ -81,16 +126,35 @@ margin: 0;
 	}
 
 	header.headerHidden .navPage .itemPage li:nth-child(1) {
-		transition-delay: 0.15s;
+		transition-delay: 0.32s;
 	}
 
 	header.headerHidden .navPage .itemPage li:nth-child(2) {
-		transition-delay: 0.1s;
+		transition-delay: 0.28s;
 	}
 
 	header.headerHidden .navPage .itemPage li:nth-child(3) {
-		transition-delay: 0.05s;
+		transition-delay: 0.24s;
 	}
+	header.headerHidden .navPage .itemPage li:nth-child(4) {
+		transition-delay: 0.20s;
+	}
+
+	header.headerHidden .navPage .itemPage li:nth-child(5) {
+		transition-delay: 0.16s;
+	}
+
+	header.headerHidden .navPage .itemPage li:nth-child(6) {
+		transition-delay: 0.12s;
+	}
+	header.headerHidden .navPage .itemPage li:nth-child(7) {
+		transition-delay: 0.08s;
+	}
+
+	header.headerHidden .navPage .itemPage li:nth-child(8) {
+		transition-delay: 0.04s;
+	}
+
 
 	header.headerHidden.active .navPage .itemPage li:nth-child(1) {
 		transition-delay: 0.1s;
@@ -103,6 +167,26 @@ margin: 0;
 	header.headerHidden.active .navPage .itemPage li:nth-child(3) {
 		transition-delay: 0.3s;
 	}
+	header.headerHidden.active .navPage .itemPage li:nth-child(4) {
+		transition-delay: 0.4s;
+	}
+
+	header.headerHidden.active .navPage .itemPage li:nth-child(5) {
+		transition-delay: 0.5s;
+	}
+
+	header.headerHidden.active .navPage .itemPage li:nth-child(6) {
+		transition-delay: 0.6s;
+	}
+	header.headerHidden.active .navPage .itemPage li:nth-child(7) {
+		transition-delay: 0.7s;
+	}
+
+	header.headerHidden.active .navPage .itemPage li:nth-child(8) {
+		transition-delay: 0.8s;
+	}
+
+
 
 	header.headerHidden.active .navPage .itemPage li {
 		position: relative;
@@ -167,16 +251,40 @@ margin: 0;
 	}
 
 	/*↑↑↑↑↑↑↑header↑↑↑↑↑↑*/
+	.mainLink::before,
+	.mainLink::after{
+		height: 4px;
+	}
+	.mainLink{
+		font-size: 4em;
+	}
+	.welcomeContentLeft,
+	.welcomeContentRight{
+		margin-top: 0;
+	}
+	figure.ourWorkEffect{
+		margin: 10px auto;
+	}
+
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
-
+	.mainLink::before,
+	.mainLink::after{
+		height: 3px;
+	}
+	.mainLink{
+		font-size: 3em;
+	}
 }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px) {
 
+	.mainLink{
+		font-size: 2em;
+	}
 }
 
 
